@@ -1,0 +1,27 @@
+{
+	"name": "mconv",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"files": ["dist"],
+	"scripts": {
+		"build": "bun build ./src/index.ts --outdir ./dist --target browser && bun run build:types",
+		"build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+		"test": "bun test",
+		"bench": "bun run ./bench/index.ts"
+	},
+	"dependencies": {
+		"@mconv/core": "workspace:*",
+		"@mconv/codecs": "workspace:*"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.2"
+	}
+}

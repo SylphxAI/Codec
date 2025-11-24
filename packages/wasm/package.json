@@ -1,0 +1,15 @@
+{
+	"name": "@mconv/wasm",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "./pkg/mconv_wasm.js",
+	"types": "./pkg/mconv_wasm.d.ts",
+	"files": ["pkg"],
+	"scripts": {
+		"build": "wasm-pack build --target web --out-dir pkg",
+		"build:node": "wasm-pack build --target nodejs --out-dir pkg-node",
+		"build:threads": "RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals' wasm-pack build --target web --out-dir pkg-mt -- --features threads",
+		"test": "cargo test",
+		"bench": "cargo bench"
+	}
+}
