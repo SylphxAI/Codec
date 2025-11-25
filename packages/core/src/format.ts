@@ -14,6 +14,7 @@ const MAGIC_BYTES: Record<string, { bytes: number[]; mask?: number[]; offset?: n
 	tiff_be: { bytes: [0x4d, 0x4d, 0x00, 0x2a] }, // Big endian
 	ico: { bytes: [0x00, 0x00, 0x01, 0x00] },
 	qoi: { bytes: [0x71, 0x6f, 0x69, 0x66] }, // "qoif"
+	pcx: { bytes: [0x0a] }, // PCX signature
 	avif: { bytes: [0x00, 0x00, 0x00], offset: 4 }, // ftyp at offset 4
 
 	// Videos
@@ -40,6 +41,7 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'ppm',
 	'pgm',
 	'pbm',
+	'pcx',
 ])
 
 /**
@@ -111,6 +113,16 @@ export function detectFormat(data: Uint8Array): Format | null {
 		return 'tiff'
 	if (matchMagic(data, MAGIC_BYTES.ico!)) return 'ico'
 	if (matchMagic(data, MAGIC_BYTES.qoi!)) return 'qoi'
+
+	// PCX (check before PNM to avoid false positives)
+	if (
+		data.length >= 128 &&
+		data[0] === 0x0a &&
+		(data[1] === 0 || data[1] === 2 || data[1] === 3 || data[1] === 4 || data[1] === 5) &&
+		(data[2] === 0 || data[2] === 1)
+	) {
+		return 'pcx'
+	}
 
 	// PNM formats (PBM, PGM, PPM)
 	if (data.length >= 2 && data[0] === 0x50) {
