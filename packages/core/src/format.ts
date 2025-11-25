@@ -34,6 +34,7 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'avif',
 	'tiff',
 	'ico',
+	'tga',
 ])
 
 /**
@@ -104,6 +105,31 @@ export function detectFormat(data: Uint8Array): Format | null {
 	if (matchMagic(data, MAGIC_BYTES.tiff_le!) || matchMagic(data, MAGIC_BYTES.tiff_be!))
 		return 'tiff'
 	if (matchMagic(data, MAGIC_BYTES.ico!)) return 'ico'
+
+	// TGA has no magic bytes - detect by checking if it could be a valid TGA
+	// TGA is often detected by file extension, but we can check header validity
+	if (data.length >= 18) {
+		const imageType = data[2]
+		const colorMapType = data[1]
+		const pixelDepth = data[16]
+		// Valid image types: 0, 1, 2, 3, 9, 10, 11
+		const validImageTypes = [0, 1, 2, 3, 9, 10, 11]
+		// Valid pixel depths: 8, 15, 16, 24, 32
+		const validPixelDepths = [8, 15, 16, 24, 32]
+		// Color map type must be 0 or 1
+		if (
+			validImageTypes.includes(imageType!) &&
+			validPixelDepths.includes(pixelDepth!) &&
+			(colorMapType === 0 || colorMapType === 1)
+		) {
+			// Additional check: width and height should be reasonable
+			const width = data[12]! | (data[13]! << 8)
+			const height = data[14]! | (data[15]! << 8)
+			if (width > 0 && height > 0 && width <= 65535 && height <= 65535) {
+				return 'tga'
+			}
+		}
+	}
 
 	return null
 }

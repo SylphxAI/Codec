@@ -4,6 +4,7 @@ import {
 	IcoCodec,
 	JpegCodec,
 	PngCodec,
+	TgaCodec,
 	TiffCodec,
 	WebPCodec,
 } from '@mconv/codecs'
@@ -20,6 +21,7 @@ const codecs = {
 	ico: IcoCodec,
 	jpeg: JpegCodec,
 	png: PngCodec,
+	tga: TgaCodec,
 	tiff: TiffCodec,
 	webp: WebPCodec,
 } as const
