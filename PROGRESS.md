@@ -13,9 +13,9 @@ Last Updated: 2024
 | Video Codecs | 0 | 0 | 8 | 8 |
 | Animation Codecs | 3 | 0 | 2 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
-| Processing Packages | 5 | 0 | 3 | 8 |
+| Processing Packages | 6 | 0 | 2 | 8 |
 
-**Tests**: 392 passing
+**Tests**: 424 passing
 
 ---
 
@@ -148,6 +148,7 @@ Last Updated: 2024
 | @mconv/filter | 20 | Gaussian/box blur, sharpen, Sobel/Prewitt/Laplacian edge detect, median/bilateral denoise, emboss |
 | @mconv/composite | 22 | 24 blend modes, layers, masks, chroma key, alpha ops |
 | @mconv/draw | 20 | Lines, shapes, polygons, gradients, flood fill |
+| @mconv/histogram | 15 | Analysis, auto-levels, equalization, matching |
 
 ### 📋 Planned
 
@@ -213,6 +214,7 @@ Last Updated: 2024
 - ✅ Added @mconv/draw package (20 tests)
 - ✅ Added CUR cursor codec (8 tests)
 - ✅ Added ANI animated cursor codec (9 tests)
+- ✅ Added @mconv/histogram package (15 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
