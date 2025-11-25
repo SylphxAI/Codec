@@ -4,7 +4,7 @@
 	"type": "module",
 	"workspaces": ["packages/*"],
 	"scripts": {
-		"build": "bun run --filter '@sylphx/*' build",
+		"build": "bun run --filter '@sylphx/codec-core' build && bun run --filter '@sylphx/codec' build && bun run --filter '@sylphx/codec-cli' build",
 		"test": "bun run --filter '@sylphx/*' test",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
