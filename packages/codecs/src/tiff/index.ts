@@ -1,0 +1,5 @@
+export { TiffCodec } from './codec'
+export { compressPackBits, decompressPackBits } from './compression'
+export { decodeTiff, parseTiff } from './decoder'
+export { encodeTiff } from './encoder'
+export * from './types'
