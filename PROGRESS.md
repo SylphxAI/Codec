@@ -9,13 +9,13 @@ Last Updated: 2024
 
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
-| Image Codecs | 29 | 0 | 6 | 35 |
-| Video Codecs | 2 | 0 | 6 | 8 |
+| Image Codecs | 30 | 0 | 5 | 35 |
+| Video Codecs | 3 | 0 | 6 | 9 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 622 passing
+**Tests**: 661 passing
 
 ---
 
@@ -54,12 +54,12 @@ Last Updated: 2024
 | XPM | ✅ | ✅ | ⬜ | X PixMap |
 | EXR | ✅ | ✅ | ⬜ | OpenEXR HDR, HALF/FLOAT pixels |
 | PSD | ✅ | ⬜ | ⬜ | Photoshop flattened, 8/16-bit, RGB/Gray/CMYK |
+| ILBM/IFF | ✅ | ✅ | ⬜ | Amiga interleaved bitplanes, HAM, ByteRun1 |
 
 ### 📋 Planned (Pure TypeScript)
 
 | Format | Decode | Encode | WASM | Priority | Notes |
 |--------|--------|--------|------|----------|-------|
-| ILBM/IFF | ⬜ | ⬜ | ⬜ | Low | Amiga format |
 | SVG | ⬜ | ⬜ | ⬜ | Medium | Rasterize only |
 | HEIC | ⬜ | ⬜ | 🔶 | High | HEIF container (WASM decode) |
 | AVIF | ⬜ | ⬜ | 🔶 | High | AV1 still image (WASM decode) |
@@ -84,6 +84,7 @@ Last Updated: 2024
 |--------|--------|--------|------|-------|
 | MJPEG | ✅ | ✅ | ⬜ | Motion JPEG (frame sequence) |
 | Raw YUV | ✅ | ✅ | ⬜ | I420/YV12/NV12/YUYV/YUV444 |
+| Y4M | ✅ | ✅ | ⬜ | YUV4MPEG2 container, 4:2:0/4:2:2/4:4:4 |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -214,6 +215,8 @@ Last Updated: 2024
 - ✅ Added MNG animation codec (18 tests)
 - ✅ Added Raw YUV video codec (26 tests)
 - ✅ Added @mconv/text package (22 tests)
+- ✅ Added ILBM/IFF image codec (16 tests)
+- ✅ Added Y4M video container (23 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -233,7 +236,7 @@ Last Updated: 2024
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add FLAC audio codec
-5. [ ] Add ILBM/IFF image codec
+5. [ ] Add AVI container
 6. [ ] Add SVG rasterizer
 
 ---
