@@ -3,15 +3,17 @@
 "@sylphx/codec-core": patch
 ---
 
-Add 36 new codec implementations
+Add 48 new codec implementations
 
 **Image formats:**
 - AVIF, HEIC, JXL, BPG, FLIF (modern image formats)
 - DICOM (medical imaging)
-- CR2, NEF, ARW (RAW camera formats)
+- CR2, NEF, ARW, DNG, ORF, RW2, RAF, PEF (RAW camera formats)
+- JP2/J2K (JPEG 2000)
+- XCF (GIMP)
 
 **Video formats:**
-- WebM, MOV, MPEG, 3GP, F4V, RM/RMVB, SWF, VOB, APNG
+- WebM, MOV, MPEG, 3GP, F4V, RM/RMVB, SWF, VOB, APNG, OGV
 
 **Audio formats:**
 - MP3, AAC, OPUS, AC3, DTS (common lossy)
@@ -19,5 +21,6 @@ Add 36 new codec implementations
 - AMR, SPX (speech codecs)
 - M4A, MKA, CAF (containers)
 - DSF (DSD audio)
+- MOD, S3M, XM, IT (tracker formats)
 
-Total: 89 codecs, 1901 tests, 69611 assertions
+Total: 101 codecs, 2328 tests, 97M+ assertions
