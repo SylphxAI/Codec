@@ -69,8 +69,13 @@ export function parseGif(data: Uint8Array): GifImage {
 				currentGraphicControl = readGraphicControlExtension(data, pos)
 				pos += 6 // Block size (4) + terminator (1) + 1 for block size byte
 			} else if (label === APPLICATION_EXTENSION) {
-				// Skip application extension (e.g., NETSCAPE for animation)
-				pos = skipSubBlocks(data, pos + 1)
+				// Application extension structure:
+				// - 1 byte: block size (always 11)
+				// - 11 bytes: application identifier
+				// - sub-blocks (terminated by 0)
+				const blockSize = data[pos++]! // Should be 11
+				pos += blockSize // Skip application identifier
+				pos = skipSubBlocks(data, pos) // Skip application data sub-blocks
 			} else {
 				// Skip other extensions
 				pos = skipSubBlocks(data, pos)

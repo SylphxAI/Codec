@@ -1,5 +1,6 @@
 export { GifCodec } from './codec'
 export { decodeGif, parseGif } from './decoder'
 export { encodeGif } from './encoder'
+export { decodeGifAnimation, encodeGifAnimation } from './animation'
 export { lzwCompress, lzwDecompress } from './lzw'
 export * from './types'
