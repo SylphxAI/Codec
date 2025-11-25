@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 30 | 0 | 5 | 35 |
-| Video Codecs | 9 | 0 | 2 | 11 |
+| Video Codecs | 10 | 0 | 1 | 11 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 5 | 0 | 1 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 817 passing
+**Tests**: 857 passing
 
 ---
 
@@ -91,6 +91,7 @@ Last Updated: 2024
 | MKV | ✅ | ✅ | ⬜ | Matroska/WebM container, EBML format, MJPEG video |
 | MPEG-TS | ✅ | ✅ | ⬜ | Transport Stream container, PAT/PMT/PES, MJPEG video |
 | MPEG-PS | ✅ | ✅ | ⬜ | Program Stream container (DVD/VOB), variable packs, MJPEG video |
+| M3U8/HLS | ✅ | ✅ | ⬜ | HTTP Live Streaming playlist, master/media playlists, encryption support |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -231,6 +232,7 @@ Last Updated: 2024
 - ✅ Added OGG audio container (20 tests)
 - ✅ Added MPEG-TS video container (19 tests)
 - ✅ Added MPEG-PS video container (20 tests)
+- ✅ Added M3U8/HLS playlist codec (40 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
