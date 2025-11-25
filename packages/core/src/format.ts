@@ -37,6 +37,9 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'ico',
 	'tga',
 	'qoi',
+	'ppm',
+	'pgm',
+	'pbm',
 ])
 
 /**
@@ -108,6 +111,15 @@ export function detectFormat(data: Uint8Array): Format | null {
 		return 'tiff'
 	if (matchMagic(data, MAGIC_BYTES.ico!)) return 'ico'
 	if (matchMagic(data, MAGIC_BYTES.qoi!)) return 'qoi'
+
+	// PNM formats (PBM, PGM, PPM)
+	if (data.length >= 2 && data[0] === 0x50) {
+		// 'P'
+		const type = data[1]
+		if (type === 0x31 || type === 0x34) return 'pbm' // P1 or P4
+		if (type === 0x32 || type === 0x35) return 'pgm' // P2 or P5
+		if (type === 0x33 || type === 0x36) return 'ppm' // P3 or P6
+	}
 
 	// TGA has no magic bytes - detect by checking if it could be a valid TGA
 	// TGA is often detected by file extension, but we can check header validity

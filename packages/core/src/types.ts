@@ -31,7 +31,7 @@ export interface VideoData {
 /**
  * Supported image formats
  */
-export type ImageFormat = 'bmp' | 'png' | 'jpeg' | 'gif' | 'webp' | 'avif' | 'tiff' | 'ico' | 'tga' | 'qoi'
+export type ImageFormat = 'bmp' | 'png' | 'jpeg' | 'gif' | 'webp' | 'avif' | 'tiff' | 'ico' | 'tga' | 'qoi' | 'ppm' | 'pgm' | 'pbm'
 
 /**
  * Supported video formats
