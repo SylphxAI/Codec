@@ -1,6 +1,7 @@
 // Pure TypeScript codec implementations
 
 export * from './bmp'
+export * from './cur'
 export * from './dds'
 export * from './farbfeld'
 export * from './gif'
