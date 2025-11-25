@@ -13,9 +13,9 @@ Last Updated: 2024
 | Video Codecs | 2 | 0 | 6 | 8 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
-| Processing Packages | 7 | 0 | 1 | 8 |
+| Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 600 passing
+**Tests**: 622 passing
 
 ---
 
@@ -144,12 +144,7 @@ Last Updated: 2024
 | @mconv/draw | 20 | Lines, shapes, polygons, gradients, flood fill |
 | @mconv/histogram | 15 | Analysis, auto-levels, equalization, matching |
 | @mconv/metadata | 16 | EXIF extraction, ICC profile parsing, GPS |
-
-### 📋 Planned
-
-| Package | Priority | Features |
-|---------|----------|----------|
-| @mconv/text | Medium | Text rendering (bitmap fonts) |
+| @mconv/text | 22 | Text rendering, built-in 8x8 font, word wrap |
 
 ---
 
@@ -218,6 +213,7 @@ Last Updated: 2024
 - ✅ Added AU audio codec (21 tests)
 - ✅ Added MNG animation codec (18 tests)
 - ✅ Added Raw YUV video codec (26 tests)
+- ✅ Added @mconv/text package (22 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -236,9 +232,9 @@ Last Updated: 2024
 1. [ ] Set up WASM build infrastructure
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
-4. [ ] Add @mconv/text package
-5. [ ] Add FLAC audio codec
-6. [ ] Add ILBM/IFF image codec
+4. [ ] Add FLAC audio codec
+5. [ ] Add ILBM/IFF image codec
+6. [ ] Add SVG rasterizer
 
 ---
 
