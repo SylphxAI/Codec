@@ -13,9 +13,9 @@ Last Updated: 2024
 | Video Codecs | 0 | 0 | 8 | 8 |
 | Animation Codecs | 3 | 0 | 2 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
-| Processing Packages | 6 | 0 | 2 | 8 |
+| Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 444 passing
+**Tests**: 460 passing
 
 ---
 
@@ -149,13 +149,12 @@ Last Updated: 2024
 | @mconv/composite | 22 | 24 blend modes, layers, masks, chroma key, alpha ops |
 | @mconv/draw | 20 | Lines, shapes, polygons, gradients, flood fill |
 | @mconv/histogram | 15 | Analysis, auto-levels, equalization, matching |
+| @mconv/metadata | 16 | EXIF extraction, ICC profile parsing, GPS |
 
 ### 📋 Planned
 
 | Package | Priority | Features |
 |---------|----------|----------|
-| @mconv/metadata | High | EXIF read/write, ICC profiles, XMP |
-| @mconv/histogram | Medium | Analysis, auto-levels, auto-contrast |
 | @mconv/text | Medium | Text rendering (bitmap fonts) |
 
 ---
@@ -217,6 +216,7 @@ Last Updated: 2024
 - ✅ Added @mconv/histogram package (15 tests)
 - ✅ Added EXR OpenEXR HDR codec (9 tests)
 - ✅ Added PSD Photoshop decoder (11 tests)
+- ✅ Added @mconv/metadata package (16 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -232,13 +232,12 @@ Last Updated: 2024
 
 ## 🎯 Next Steps
 
-1. [ ] Add PSD codec (Photoshop flattened)
-2. [ ] Add @mconv/metadata package (EXIF, ICC)
-3. [ ] Implement MJPEG video codec
-4. [ ] Add FLI/FLC animation codec
-5. [ ] Set up WASM build infrastructure
-6. [ ] Add WASM backend for JPEG
-7. [ ] Add H.264 WASM decoder
+1. [ ] Implement MJPEG video codec
+2. [ ] Add FLI/FLC animation codec
+3. [ ] Set up WASM build infrastructure
+4. [ ] Add WASM backend for JPEG
+5. [ ] Add H.264 WASM decoder
+6. [ ] Add @mconv/text package
 
 ---
 
