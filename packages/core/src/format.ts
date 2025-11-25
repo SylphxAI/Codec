@@ -13,6 +13,7 @@ const MAGIC_BYTES: Record<string, { bytes: number[]; mask?: number[]; offset?: n
 	tiff_le: { bytes: [0x49, 0x49, 0x2a, 0x00] }, // Little endian
 	tiff_be: { bytes: [0x4d, 0x4d, 0x00, 0x2a] }, // Big endian
 	ico: { bytes: [0x00, 0x00, 0x01, 0x00] },
+	qoi: { bytes: [0x71, 0x6f, 0x69, 0x66] }, // "qoif"
 	avif: { bytes: [0x00, 0x00, 0x00], offset: 4 }, // ftyp at offset 4
 
 	// Videos
@@ -35,6 +36,7 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'tiff',
 	'ico',
 	'tga',
+	'qoi',
 ])
 
 /**
@@ -105,6 +107,7 @@ export function detectFormat(data: Uint8Array): Format | null {
 	if (matchMagic(data, MAGIC_BYTES.tiff_le!) || matchMagic(data, MAGIC_BYTES.tiff_be!))
 		return 'tiff'
 	if (matchMagic(data, MAGIC_BYTES.ico!)) return 'ico'
+	if (matchMagic(data, MAGIC_BYTES.qoi!)) return 'qoi'
 
 	// TGA has no magic bytes - detect by checking if it could be a valid TGA
 	// TGA is often detected by file extension, but we can check header validity
