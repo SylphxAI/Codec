@@ -43,6 +43,7 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'pbm',
 	'pcx',
 	'hdr',
+	'svg',
 ])
 
 /**
@@ -102,6 +103,19 @@ export function detectFormat(data: Uint8Array): Format | null {
 		if (brand === 'qt  ' || brand.startsWith('qt')) return 'mov'
 		// Default to mp4 for other ftyp
 		return 'mp4'
+	}
+
+	// Check SVG (text-based XML format)
+	if (data.length >= 5) {
+		const text = new TextDecoder('ascii').decode(data.slice(0, 1000))
+		const trimmed = text.trim().toLowerCase()
+		if (
+			trimmed.startsWith('<svg') ||
+			(trimmed.startsWith('<?xml') && trimmed.includes('<svg')) ||
+			trimmed.includes('<!doctype svg')
+		) {
+			return 'svg'
+		}
 	}
 
 	// Check other formats
@@ -196,6 +210,7 @@ export function getExtension(format: Format): string {
  * Get MIME type for format
  */
 export function getMimeType(format: Format): string {
+	if (format === 'svg') return 'image/svg+xml'
 	const prefix = isImageFormat(format) ? 'image' : 'video'
 	const type = format === 'jpeg' ? 'jpeg' : format
 	return `${prefix}/${type}`

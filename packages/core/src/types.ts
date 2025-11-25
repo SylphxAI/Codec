@@ -47,6 +47,7 @@ export type ImageFormat =
 	| 'pbm'
 	| 'pcx'
 	| 'hdr'
+	| 'svg'
 
 /**
  * Supported video formats

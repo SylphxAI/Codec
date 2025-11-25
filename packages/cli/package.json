@@ -1,0 +1,25 @@
+{
+	"name": "@mconv/cli",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "Universal media converter CLI - Pure TypeScript",
+	"bin": {
+		"mconv": "./dist/index.js"
+	},
+	"main": "./dist/index.js",
+	"files": ["dist"],
+	"scripts": {
+		"build": "bun build ./src/index.ts --outdir ./dist --target node --minify && chmod +x ./dist/index.js",
+		"dev": "bun run ./src/index.ts",
+		"test": "bun test"
+	},
+	"dependencies": {
+		"@mconv/core": "workspace:*",
+		"@mconv/codecs": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.0"
+	},
+	"keywords": ["image", "convert", "png", "jpeg", "webp", "gif", "cli"],
+	"license": "MIT"
+}
