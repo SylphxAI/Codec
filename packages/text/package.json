@@ -1,7 +1,7 @@
 {
 	"name": "@mconv/text",
 	"private": true,
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Text rendering with bitmap fonts",
 	"type": "module",
 	"main": "src/index.ts",

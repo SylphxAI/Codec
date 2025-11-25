@@ -1,7 +1,7 @@
 {
 	"name": "@mconv/metadata",
 	"private": true,
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Image metadata extraction and manipulation (EXIF, ICC profiles)",
 	"type": "module",
 	"main": "src/index.ts",
