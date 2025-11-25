@@ -1,5 +1,6 @@
 // Pure TypeScript codec implementations
 
+export * from './ani'
 export * from './bmp'
 export * from './cur'
 export * from './dds'
