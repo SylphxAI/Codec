@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 29 | 0 | 6 | 35 |
-| Video Codecs | 0 | 0 | 8 | 8 |
+| Video Codecs | 1 | 0 | 7 | 8 |
 | Animation Codecs | 3 | 0 | 2 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
 | Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 460 passing
+**Tests**: 478 passing
 
 ---
 
@@ -78,11 +78,16 @@ Last Updated: 2024
 
 ## 🎬 Video Codecs
 
+### ✅ Completed (Pure TypeScript)
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| MJPEG | ✅ | ✅ | ⬜ | Motion JPEG (frame sequence) |
+
 ### 📋 Planned (Pure TypeScript - Simple)
 
 | Format | Decode | Encode | WASM | Notes |
 |--------|--------|--------|------|-------|
-| MJPEG | ⬜ | ⬜ | ⬜ | Motion JPEG (frame sequence) |
 | FLI/FLC | ⬜ | ⬜ | ⬜ | Autodesk animation |
 | Raw YUV | ⬜ | ⬜ | ⬜ | Uncompressed frames |
 
@@ -217,6 +222,7 @@ Last Updated: 2024
 - ✅ Added EXR OpenEXR HDR codec (9 tests)
 - ✅ Added PSD Photoshop decoder (11 tests)
 - ✅ Added @mconv/metadata package (16 tests)
+- ✅ Added MJPEG video codec (18 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
