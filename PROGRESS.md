@@ -9,13 +9,13 @@ Last Updated: 2024
 
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
-| Image Codecs | 27 | 0 | 8 | 35 |
+| Image Codecs | 29 | 0 | 6 | 35 |
 | Video Codecs | 0 | 0 | 8 | 8 |
 | Animation Codecs | 3 | 0 | 2 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
 | Processing Packages | 6 | 0 | 2 | 8 |
 
-**Tests**: 424 passing
+**Tests**: 444 passing
 
 ---
 
@@ -52,14 +52,14 @@ Last Updated: 2024
 | WebP | ✅ | ✅ | ⬜ | Lossy/Lossless, Animation |
 | XBM | ✅ | ✅ | ⬜ | X Bitmap (monochrome) |
 | XPM | ✅ | ✅ | ⬜ | X PixMap |
+| EXR | ✅ | ✅ | ⬜ | OpenEXR HDR, HALF/FLOAT pixels |
+| PSD | ✅ | ⬜ | ⬜ | Photoshop flattened, 8/16-bit, RGB/Gray/CMYK |
 
 ### 📋 Planned (Pure TypeScript)
 
 | Format | Decode | Encode | WASM | Priority | Notes |
 |--------|--------|--------|------|----------|-------|
-| EXR | ⬜ | ⬜ | ⬜ | High | OpenEXR HDR (simplified) |
 | ILBM/IFF | ⬜ | ⬜ | ⬜ | Low | Amiga format |
-| PSD | ⬜ | ⬜ | ⬜ | Medium | Photoshop (flattened) |
 | SVG | ⬜ | ⬜ | ⬜ | Medium | Rasterize only |
 | HEIC | ⬜ | ⬜ | 🔶 | High | HEIF container (WASM decode) |
 | AVIF | ⬜ | ⬜ | 🔶 | High | AV1 still image (WASM decode) |
@@ -215,6 +215,8 @@ Last Updated: 2024
 - ✅ Added CUR cursor codec (8 tests)
 - ✅ Added ANI animated cursor codec (9 tests)
 - ✅ Added @mconv/histogram package (15 tests)
+- ✅ Added EXR OpenEXR HDR codec (9 tests)
+- ✅ Added PSD Photoshop decoder (11 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -230,12 +232,12 @@ Last Updated: 2024
 
 ## 🎯 Next Steps
 
-1. [ ] Add CUR codec (cursor files)
-2. [ ] Add EXR codec (HDR)
-3. [ ] Set up WASM build infrastructure
-4. [ ] Add WASM backend for JPEG
-5. [ ] Add @mconv/metadata package
-6. [ ] Implement MJPEG video codec
+1. [ ] Add PSD codec (Photoshop flattened)
+2. [ ] Add @mconv/metadata package (EXIF, ICC)
+3. [ ] Implement MJPEG video codec
+4. [ ] Add FLI/FLC animation codec
+5. [ ] Set up WASM build infrastructure
+6. [ ] Add WASM backend for JPEG
 7. [ ] Add H.264 WASM decoder
 
 ---
