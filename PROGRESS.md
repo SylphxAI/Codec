@@ -12,10 +12,10 @@ Last Updated: 2024
 | Image Codecs | 30 | 0 | 5 | 35 |
 | Video Codecs | 7 | 0 | 4 | 11 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
-| Audio Codecs | 4 | 0 | 2 | 6 |
+| Audio Codecs | 5 | 0 | 1 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 758 passing
+**Tests**: 778 passing
 
 ---
 
@@ -126,13 +126,13 @@ Last Updated: 2024
 | AIFF | ✅ | ✅ | ⬜ | Apple PCM, 80-bit extended float rate |
 | AU | ✅ | ✅ | ⬜ | Sun/NeXT audio, μ-law/A-law decode |
 | FLAC | ✅ | ✅ | ⬜ | Lossless compression, Rice coding, fixed prediction |
+| OGG | ✅ | ✅ | ⬜ | Container format, OGG FLAC support |
 
 ### 🔶 WASM-Only
 
 | Format | Decode | Encode | Notes |
 |--------|--------|--------|-------|
 | MP3 | ⬜ | ⬜ | MPEG Layer 3 |
-| Opus | ⬜ | ⬜ | Modern, efficient |
 
 ---
 
@@ -226,6 +226,7 @@ Last Updated: 2024
 - ✅ Added MP4 video container (18 tests)
 - ✅ Added MKV/WebM video container (22 tests)
 - ✅ Added FLAC audio codec (23 tests)
+- ✅ Added OGG audio container (20 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -245,8 +246,8 @@ Last Updated: 2024
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add MP3 audio codec (WASM)
-5. [ ] Add Opus audio codec (WASM)
-6. [ ] Add SVG rasterizer
+5. [ ] Add SVG rasterizer
+6. [ ] Add MPEG-TS container
 
 ---
 
