@@ -1,4 +1,12 @@
-import { BmpCodec } from '@mconv/codecs'
+import {
+	BmpCodec,
+	GifCodec,
+	IcoCodec,
+	JpegCodec,
+	PngCodec,
+	TiffCodec,
+	WebPCodec,
+} from '@mconv/codecs'
 import type { ImageData, ImageFormat } from '@mconv/core'
 import { detectFormat } from '@mconv/core'
 import { getBackend, getWasmModule } from './backend'
@@ -8,9 +16,12 @@ import { getBackend, getWasmModule } from './backend'
  */
 const codecs = {
 	bmp: BmpCodec,
-	// TODO: Add more codecs
-	// png: PngCodec,
-	// jpeg: JpegCodec,
+	gif: GifCodec,
+	ico: IcoCodec,
+	jpeg: JpegCodec,
+	png: PngCodec,
+	tiff: TiffCodec,
+	webp: WebPCodec,
 } as const
 
 type SupportedFormat = keyof typeof codecs
