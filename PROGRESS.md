@@ -11,11 +11,11 @@ Last Updated: 2024
 |----------|------|-------------|---------|-------|
 | Image Codecs | 29 | 0 | 6 | 35 |
 | Video Codecs | 1 | 0 | 7 | 8 |
-| Animation Codecs | 4 | 0 | 1 | 5 |
+| Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 556 passing
+**Tests**: 574 passing
 
 ---
 
@@ -113,12 +113,7 @@ Last Updated: 2024
 | APNG | ✅ | ✅ | ⬜ | Animated PNG |
 | WebP | ✅ | ✅ | ⬜ | Animated WebP |
 | FLI/FLC | ✅ | ✅ | ⬜ | Autodesk Animator, delta compression |
-
-### 📋 Planned
-
-| Format | Decode | Encode | WASM | Notes |
-|--------|--------|--------|------|-------|
-| MNG | ⬜ | ⬜ | ⬜ | Multiple-image PNG |
+| MNG | ✅ | ✅ | ⬜ | Multiple-image Network Graphics |
 
 ---
 
@@ -227,6 +222,7 @@ Last Updated: 2024
 - ✅ Added WAV audio codec (20 tests)
 - ✅ Added AIFF audio codec (19 tests)
 - ✅ Added AU audio codec (21 tests)
+- ✅ Added MNG animation codec (18 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -246,8 +242,8 @@ Last Updated: 2024
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add @mconv/text package
-5. [ ] Add MNG animation codec
-6. [ ] Add FLAC audio codec
+5. [ ] Add FLAC audio codec
+6. [ ] Add Raw YUV video codec
 
 ---
 
