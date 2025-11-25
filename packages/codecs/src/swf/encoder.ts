@@ -1,13 +1,78 @@
 import type { EncodeOptions, ImageData, VideoData } from '@sylphx/codec-core'
-import { deflateSync } from 'node:zlib'
 import {
 	type SwfRGB,
 	type SwfRect,
 	SwfTagType,
 	SWF_UNCOMPRESSED,
-	SWF_ZLIB,
 	TWIPS_PER_PIXEL,
 } from './types'
+
+// NOTE: Using uncompressed SWF (FWS) format for browser compatibility.
+// Compressed SWF (CWS) requires zlib which is not available in browser builds.
+
+/**
+ * Create zlib-wrapped data using stored (uncompressed) deflate blocks.
+ * This is valid zlib but doesn't actually compress - just wraps data.
+ */
+function deflateStore(data: Uint8Array): Uint8Array {
+	// Calculate Adler-32 checksum
+	let s1 = 1
+	let s2 = 0
+	for (let i = 0; i < data.length; i++) {
+		s1 = (s1 + data[i]!) % 65521
+		s2 = (s2 + s1) % 65521
+	}
+	const adler32 = ((s2 << 16) | s1) >>> 0
+
+	// Split into 65535-byte blocks (max for stored blocks)
+	const MAX_BLOCK_SIZE = 65535
+	const numBlocks = Math.ceil(data.length / MAX_BLOCK_SIZE) || 1
+
+	// Calculate output size: zlib header (2) + blocks + adler32 (4)
+	let outputSize = 2 + 4 // header + checksum
+	for (let i = 0; i < numBlocks; i++) {
+		const blockStart = i * MAX_BLOCK_SIZE
+		const blockSize = Math.min(MAX_BLOCK_SIZE, data.length - blockStart)
+		outputSize += 5 + blockSize // block header (5) + data
+	}
+
+	const output = new Uint8Array(outputSize)
+	let pos = 0
+
+	// Zlib header: CMF=0x78 (deflate, 32K window), FLG=0x01 (no dict, level 0)
+	output[pos++] = 0x78
+	output[pos++] = 0x01
+
+	// Write deflate blocks
+	for (let i = 0; i < numBlocks; i++) {
+		const blockStart = i * MAX_BLOCK_SIZE
+		const blockSize = Math.min(MAX_BLOCK_SIZE, data.length - blockStart)
+		const isLast = i === numBlocks - 1
+
+		// Block header: BFINAL (1 bit) + BTYPE=00 (2 bits) = stored block
+		output[pos++] = isLast ? 0x01 : 0x00
+
+		// LEN (2 bytes, little-endian)
+		output[pos++] = blockSize & 0xff
+		output[pos++] = (blockSize >> 8) & 0xff
+
+		// NLEN (one's complement of LEN)
+		output[pos++] = ~blockSize & 0xff
+		output[pos++] = (~blockSize >> 8) & 0xff
+
+		// Block data
+		output.set(data.subarray(blockStart, blockStart + blockSize), pos)
+		pos += blockSize
+	}
+
+	// Adler-32 checksum (big-endian)
+	output[pos++] = (adler32 >> 24) & 0xff
+	output[pos++] = (adler32 >> 16) & 0xff
+	output[pos++] = (adler32 >> 8) & 0xff
+	output[pos++] = adler32 & 0xff
+
+	return output
+}
 
 /**
  * Bit writer for SWF format
@@ -189,7 +254,7 @@ function createBitmapTag(
 		argbData[i * 4 + 3] = data[i * 4 + 3]! // A
 	}
 
-	const compressed = deflateSync(argbData)
+	const compressed = deflateStore(argbData)
 	writer.writeBytes(compressed)
 
 	return writer.toUint8Array()
@@ -221,15 +286,13 @@ function createPlaceObjectTag(characterId: number, depth: number): Uint8Array {
 /**
  * Encode ImageData to SWF
  */
-export function encodeSwf(image: ImageData, options?: EncodeOptions): Uint8Array {
+export function encodeSwf(image: ImageData, _options?: EncodeOptions): Uint8Array {
 	const { width, height, data } = image
-	const compress = options?.quality !== undefined ? options.quality > 0 : true
 
 	const writer = new BitWriter()
 
-	// Signature
-	const signature = compress ? SWF_ZLIB : SWF_UNCOMPRESSED
-	for (const c of signature) {
+	// Signature - always use uncompressed (FWS) for browser compatibility
+	for (const c of SWF_UNCOMPRESSED) {
 		writer.writeUint8(c.charCodeAt(0))
 	}
 
@@ -279,13 +342,8 @@ export function encodeSwf(image: ImageData, options?: EncodeOptions): Uint8Array
 
 	const bodyData = bodyWriter.toUint8Array()
 
-	// Write body (compressed or uncompressed)
-	if (compress && signature === SWF_ZLIB) {
-		const compressed = deflateSync(bodyData)
-		writer.writeBytes(compressed)
-	} else {
-		writer.writeBytes(bodyData)
-	}
+	// Write body (uncompressed)
+	writer.writeBytes(bodyData)
 
 	const result = writer.toUint8Array()
 
@@ -302,15 +360,13 @@ export function encodeSwf(image: ImageData, options?: EncodeOptions): Uint8Array
 /**
  * Encode VideoData to SWF animation
  */
-export function encodeSwfAnimation(video: VideoData, options?: EncodeOptions): Uint8Array {
+export function encodeSwfAnimation(video: VideoData, _options?: EncodeOptions): Uint8Array {
 	const { width, height, frameRate, frames } = video
-	const compress = options?.quality !== undefined ? options.quality > 0 : true
 
 	const writer = new BitWriter()
 
-	// Signature
-	const signature = compress ? SWF_ZLIB : SWF_UNCOMPRESSED
-	for (const c of signature) {
+	// Signature - always use uncompressed (FWS) for browser compatibility
+	for (const c of SWF_UNCOMPRESSED) {
 		writer.writeUint8(c.charCodeAt(0))
 	}
 
@@ -367,13 +423,8 @@ export function encodeSwfAnimation(video: VideoData, options?: EncodeOptions): U
 
 	const bodyData = bodyWriter.toUint8Array()
 
-	// Write body
-	if (compress && signature === SWF_ZLIB) {
-		const compressed = deflateSync(bodyData)
-		writer.writeBytes(compressed)
-	} else {
-		writer.writeBytes(bodyData)
-	}
+	// Write body (uncompressed)
+	writer.writeBytes(bodyData)
 
 	const result = writer.toUint8Array()
 

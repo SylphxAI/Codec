@@ -13,8 +13,8 @@ describe('SWF Codec', () => {
 
 		const encoded = encodeSwf(image)
 
-		// Check SWF signature (CWS for compressed)
-		expect(encoded[0]).toBe(0x43) // C
+		// Check SWF signature (FWS for uncompressed)
+		expect(encoded[0]).toBe(0x46) // F
 		expect(encoded[1]).toBe(0x57) // W
 		expect(encoded[2]).toBe(0x53) // S
 
@@ -199,8 +199,8 @@ describe('SWF Codec', () => {
 
 		const encoded = encodeSwfAnimation(video)
 
-		// Check SWF signature
-		expect(encoded[0]).toBe(0x43) // C
+		// Check SWF signature (FWS = uncompressed)
+		expect(encoded[0]).toBe(0x46) // F
 		expect(encoded[1]).toBe(0x57) // W
 		expect(encoded[2]).toBe(0x53) // S
 	})

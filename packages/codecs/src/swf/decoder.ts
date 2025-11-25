@@ -1,5 +1,5 @@
 import type { ImageData, VideoData, VideoFrame } from '@sylphx/codec-core'
-import { inflateSync } from 'node:zlib'
+import { inflate } from '../png/inflate'
 import {
 	type DefineBitsLosslessTag,
 	type SetBackgroundColorTag,
@@ -129,8 +129,8 @@ function decompressSWF(data: Uint8Array): Uint8Array {
 		const header = data.slice(0, 8)
 		const compressed = data.slice(8)
 
-		// Decompress the rest
-		const decompressed = inflateSync(compressed)
+		// Decompress the rest (zlib format with header)
+		const decompressed = inflate(compressed)
 
 		// Combine header with decompressed data
 		const result = new Uint8Array(header.length + decompressed.length)
@@ -301,7 +301,7 @@ function extractBitmap(tag: SwfTag): ImageData | null {
 
 	// Read and decompress bitmap data
 	const compressedData = reader.readBytes(reader.remaining)
-	const decompressed = inflateSync(compressedData)
+	const decompressed = inflate(compressedData)
 
 	const output = new Uint8Array(bitmapWidth * bitmapHeight * 4)
 

@@ -57,7 +57,12 @@ class BitReader {
 		if (this.pos >= this.data.length) {
 			throw new Error('Unexpected end of data')
 		}
-		return this.data[this.pos++]!
+		const byte = this.data[this.pos++]!
+		// Update currentByte for subsequent bit reads
+		if (this.pos < this.data.length) {
+			this.currentByte = this.data[this.pos]!
+		}
+		return byte
 	}
 
 	/**
@@ -70,6 +75,10 @@ class BitReader {
 		}
 		const result = this.data.slice(this.pos, this.pos + n)
 		this.pos += n
+		// Update currentByte for subsequent bit reads
+		if (this.pos < this.data.length) {
+			this.currentByte = this.data[this.pos]!
+		}
 		return result
 	}
 
