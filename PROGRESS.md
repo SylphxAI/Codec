@@ -12,10 +12,10 @@ Last Updated: 2024
 | Image Codecs | 29 | 0 | 6 | 35 |
 | Video Codecs | 1 | 0 | 7 | 8 |
 | Animation Codecs | 4 | 0 | 1 | 5 |
-| Audio Codecs | 0 | 0 | 6 | 6 |
+| Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 496 passing
+**Tests**: 556 passing
 
 ---
 
@@ -122,15 +122,15 @@ Last Updated: 2024
 
 ---
 
-## 🔊 Audio Codecs (Future)
+## 🔊 Audio Codecs
 
-### 📋 Planned (Pure TypeScript)
+### ✅ Completed (Pure TypeScript)
 
 | Format | Decode | Encode | WASM | Notes |
 |--------|--------|--------|------|-------|
-| WAV | ⬜ | ⬜ | ⬜ | PCM, basic |
-| AIFF | ⬜ | ⬜ | ⬜ | Apple PCM |
-| AU | ⬜ | ⬜ | ⬜ | Sun audio |
+| WAV | ✅ | ✅ | ⬜ | PCM 8/16/24/32-bit, IEEE float |
+| AIFF | ✅ | ✅ | ⬜ | Apple PCM, 80-bit extended float rate |
+| AU | ✅ | ✅ | ⬜ | Sun/NeXT audio, μ-law/A-law decode |
 
 ### 🔶 WASM-Only
 
@@ -224,6 +224,9 @@ Last Updated: 2024
 - ✅ Added @mconv/metadata package (16 tests)
 - ✅ Added MJPEG video codec (18 tests)
 - ✅ Added FLI/FLC animation codec (18 tests)
+- ✅ Added WAV audio codec (20 tests)
+- ✅ Added AIFF audio codec (19 tests)
+- ✅ Added AU audio codec (21 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -239,12 +242,12 @@ Last Updated: 2024
 
 ## 🎯 Next Steps
 
-1. [ ] Implement MJPEG video codec
-2. [ ] Add FLI/FLC animation codec
-3. [ ] Set up WASM build infrastructure
-4. [ ] Add WASM backend for JPEG
-5. [ ] Add H.264 WASM decoder
-6. [ ] Add @mconv/text package
+1. [ ] Set up WASM build infrastructure
+2. [ ] Add WASM backend for JPEG
+3. [ ] Add H.264 WASM decoder
+4. [ ] Add @mconv/text package
+5. [ ] Add MNG animation codec
+6. [ ] Add FLAC audio codec
 
 ---
 

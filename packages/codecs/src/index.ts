@@ -1,6 +1,8 @@
 // Pure TypeScript codec implementations
 
+export * from './aiff'
 export * from './ani'
+export * from './au'
 export * from './bmp'
 export * from './cur'
 export * from './dds'
@@ -27,6 +29,7 @@ export * from './sunraster'
 export * from './tga'
 export * from './tiff'
 export * from './vtf'
+export * from './wav'
 export * from './wbmp'
 export * from './webp'
 export * from './xbm'
