@@ -1,0 +1,236 @@
+# mconv Progress Tracker
+
+> Universal media converter, editor, and modifier
+> 100% TypeScript + optional WASM acceleration
+
+Last Updated: 2024
+
+## 📊 Overall Status
+
+| Category | Done | In Progress | Planned | Total |
+|----------|------|-------------|---------|-------|
+| Image Codecs | 25 | 0 | 10 | 35 |
+| Video Codecs | 0 | 0 | 8 | 8 |
+| Animation Codecs | 3 | 0 | 2 | 5 |
+| Audio Codecs | 0 | 0 | 6 | 6 |
+| Processing Packages | 5 | 0 | 3 | 8 |
+
+**Tests**: 392 passing
+
+---
+
+## 🖼️ Image Codecs
+
+### ✅ Completed (Pure TypeScript)
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| BMP | ✅ | ✅ | ⬜ | 1/4/8/16/24/32-bit, RLE |
+| DDS | ✅ | ⬜ | ⬜ | DXT1/DXT3/DXT5, BC1-BC5 |
+| Farbfeld | ✅ | ✅ | ⬜ | 16-bit RGBA |
+| GIF | ✅ | ✅ | ⬜ | Animation, LZW |
+| HDR | ✅ | ✅ | ⬜ | Radiance RGBE |
+| ICO | ✅ | ✅ | ⬜ | Multi-resolution |
+| JPEG | ✅ | ✅ | ⬜ | Baseline DCT |
+| KTX | ✅ | ⬜ | ⬜ | OpenGL texture container |
+| PAM | ✅ | ✅ | ⬜ | Portable Arbitrary Map |
+| PCX | ✅ | ✅ | ⬜ | RLE compression |
+| PFM | ✅ | ✅ | ⬜ | 32-bit float HDR |
+| PIX | ✅ | ✅ | ⬜ | Alias/Wavefront, RLE |
+| PNG | ✅ | ✅ | ⬜ | All bit depths, interlacing |
+| PNM | ✅ | ✅ | ⬜ | PBM/PGM/PPM |
+| PVR | ✅ | ⬜ | ⬜ | PowerVR textures |
+| QOI | ✅ | ✅ | ⬜ | Quite OK Image |
+| SGI | ✅ | ✅ | ⬜ | RGB/RGBA, RLE |
+| Sun Raster | ✅ | ✅ | ⬜ | RLE compression |
+| TGA | ✅ | ✅ | ⬜ | RLE, color mapped |
+| TIFF | ✅ | ✅ | ⬜ | LZW, basic tags |
+| VTF | ✅ | ⬜ | ⬜ | Valve Source Engine |
+| WBMP | ✅ | ✅ | ⬜ | Wireless Bitmap |
+| WebP | ✅ | ✅ | ⬜ | Lossy/Lossless, Animation |
+| XBM | ✅ | ✅ | ⬜ | X Bitmap (monochrome) |
+| XPM | ✅ | ✅ | ⬜ | X PixMap |
+
+### 📋 Planned (Pure TypeScript)
+
+| Format | Decode | Encode | WASM | Priority | Notes |
+|--------|--------|--------|------|----------|-------|
+| CUR | ⬜ | ⬜ | ⬜ | High | Windows cursor |
+| ANI | ⬜ | ⬜ | ⬜ | Medium | Animated cursor |
+| EXR | ⬜ | ⬜ | ⬜ | High | OpenEXR HDR (simplified) |
+| ILBM/IFF | ⬜ | ⬜ | ⬜ | Low | Amiga format |
+| PSD | ⬜ | ⬜ | ⬜ | Medium | Photoshop (flattened) |
+| SVG | ⬜ | ⬜ | ⬜ | Medium | Rasterize only |
+| HEIC | ⬜ | ⬜ | 🔶 | High | HEIF container (WASM decode) |
+| AVIF | ⬜ | ⬜ | 🔶 | High | AV1 still image (WASM decode) |
+| JPEG-XL | ⬜ | ⬜ | 🔶 | High | Next-gen (WASM decode) |
+| WebP2 | ⬜ | ⬜ | 🔶 | Low | Experimental |
+
+### 🔶 WASM-Only (Complex Compression)
+
+| Format | Decode | Encode | Notes |
+|--------|--------|--------|-------|
+| JPEG 2000 | ⬜ | ⬜ | Wavelet compression |
+| JPEG-XR | ⬜ | ⬜ | Microsoft HD Photo |
+| BPG | ⬜ | ⬜ | Better Portable Graphics |
+
+---
+
+## 🎬 Video Codecs
+
+### 📋 Planned (Pure TypeScript - Simple)
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| MJPEG | ⬜ | ⬜ | ⬜ | Motion JPEG (frame sequence) |
+| FLI/FLC | ⬜ | ⬜ | ⬜ | Autodesk animation |
+| Raw YUV | ⬜ | ⬜ | ⬜ | Uncompressed frames |
+
+### 🔶 WASM-Only (Inter-frame Compression)
+
+| Format | Decode | Encode | Notes |
+|--------|--------|--------|-------|
+| H.264/AVC | ⬜ | ⬜ | Most common video codec |
+| H.265/HEVC | ⬜ | ⬜ | High efficiency |
+| AV1 | ⬜ | ⬜ | Open, royalty-free |
+| VP8 | ⬜ | ⬜ | WebM legacy |
+| VP9 | ⬜ | ⬜ | WebM current |
+
+---
+
+## 🎞️ Animation Codecs
+
+### ✅ Completed (Pure TypeScript)
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| GIF | ✅ | ✅ | ⬜ | 256 colors, disposal |
+| APNG | ✅ | ✅ | ⬜ | Animated PNG |
+| WebP | ✅ | ✅ | ⬜ | Animated WebP |
+
+### 📋 Planned
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| MNG | ⬜ | ⬜ | ⬜ | Multiple-image PNG |
+| FLIF | ⬜ | ⬜ | 🔶 | Free Lossless Image |
+
+---
+
+## 🔊 Audio Codecs (Future)
+
+### 📋 Planned (Pure TypeScript)
+
+| Format | Decode | Encode | WASM | Notes |
+|--------|--------|--------|------|-------|
+| WAV | ⬜ | ⬜ | ⬜ | PCM, basic |
+| AIFF | ⬜ | ⬜ | ⬜ | Apple PCM |
+| AU | ⬜ | ⬜ | ⬜ | Sun audio |
+
+### 🔶 WASM-Only
+
+| Format | Decode | Encode | Notes |
+|--------|--------|--------|-------|
+| MP3 | ⬜ | ⬜ | MPEG Layer 3 |
+| AAC | ⬜ | ⬜ | Advanced Audio |
+| Opus | ⬜ | ⬜ | Modern, efficient |
+
+---
+
+## 🛠️ Processing Packages
+
+### ✅ Completed
+
+| Package | Tests | Features |
+|---------|-------|----------|
+| @mconv/transform | 19 | Resize (4 algorithms), crop, rotate, flip |
+| @mconv/color | 17 | RGB↔HSL/HSV/CMYK/LAB, brightness, contrast, saturation, gamma, levels, effects |
+| @mconv/filter | 20 | Gaussian/box blur, sharpen, Sobel/Prewitt/Laplacian edge detect, median/bilateral denoise, emboss |
+| @mconv/composite | 22 | 24 blend modes, layers, masks, chroma key, alpha ops |
+| @mconv/draw | 20 | Lines, shapes, polygons, gradients, flood fill |
+
+### 📋 Planned
+
+| Package | Priority | Features |
+|---------|----------|----------|
+| @mconv/metadata | High | EXIF read/write, ICC profiles, XMP |
+| @mconv/histogram | Medium | Analysis, auto-levels, auto-contrast |
+| @mconv/text | Medium | Text rendering (bitmap fonts) |
+
+---
+
+## 🚀 WASM Backend Architecture
+
+### Design Goals
+- Optional WASM acceleration for CPU-intensive operations
+- Fallback to pure TS when WASM unavailable
+- Same API for both implementations
+
+### WASM Candidates
+
+| Operation | Speedup | Priority |
+|-----------|---------|----------|
+| JPEG decode/encode | 5-10x | High |
+| PNG decode (zlib) | 3-5x | High |
+| Resize (Lanczos) | 5-8x | High |
+| Blur (large radius) | 10-20x | Medium |
+| Color conversion (batch) | 3-5x | Medium |
+| H.264/H.265 decode | Required | High |
+| AV1 decode | Required | High |
+
+### Implementation Plan
+
+1. **Phase 1**: Core infrastructure
+   - WASM loader with fallback
+   - Shared memory management
+   - Performance benchmarking
+
+2. **Phase 2**: Image acceleration
+   - zlib (PNG, TIFF)
+   - libjpeg-turbo
+   - Resize kernels
+
+3. **Phase 3**: Video codecs
+   - FFmpeg subset (decode only)
+   - H.264, H.265, AV1, VP9
+
+---
+
+## 📈 Changelog
+
+### 2024-XX-XX (Current Session)
+- ✅ Added @mconv/color package (17 tests)
+- ✅ Added @mconv/filter package (20 tests)
+- ✅ Added @mconv/composite package (22 tests)
+- ✅ Added @mconv/draw package (20 tests)
+- 📝 Created PROGRESS.md for tracking
+
+### Previous Sessions
+- ✅ Added PFM, PVR, KTX, PIX, VTF codecs
+- ✅ Added Sun Raster, PAM, WBMP, SGI, XBM codecs
+- ✅ Added DDS, Farbfeld, XPM codecs
+- ✅ Added @mconv/transform package
+- ✅ Core image codecs (PNG, JPEG, GIF, WebP, etc.)
+
+---
+
+## 🎯 Next Steps
+
+1. [ ] Add CUR codec (cursor files)
+2. [ ] Add EXR codec (HDR)
+3. [ ] Set up WASM build infrastructure
+4. [ ] Add WASM backend for JPEG
+5. [ ] Add @mconv/metadata package
+6. [ ] Implement MJPEG video codec
+7. [ ] Add H.264 WASM decoder
+
+---
+
+## Legend
+
+| Symbol | Meaning |
+|--------|---------|
+| ✅ | Completed |
+| ⬜ | Not started |
+| 🔶 | WASM required/recommended |
+| 🚧 | In progress |
