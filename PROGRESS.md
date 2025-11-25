@@ -12,10 +12,10 @@ Last Updated: 2024
 | Image Codecs | 30 | 0 | 5 | 35 |
 | Video Codecs | 12 | 0 | 0 | 12 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
-| Audio Codecs | 6 | 0 | 0 | 6 |
+| Audio Codecs | 7 | 0 | 0 | 7 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 981 passing
+**Tests**: 1022 passing
 
 ---
 
@@ -133,6 +133,7 @@ Last Updated: 2024
 | FLAC | ✅ | ✅ | ⬜ | Lossless compression, Rice coding, fixed prediction |
 | OGG | ✅ | ✅ | ⬜ | Container format, OGG FLAC support |
 | MIDI | ✅ | ✅ | ⬜ | Standard MIDI File, multi-track, all events |
+| CUE | ✅ | ✅ | ⬜ | CD track listing, split points, chapter markers |
 
 ### 🔶 WASM-Only
 
@@ -239,6 +240,7 @@ Last Updated: 2024
 - ✅ Added SRT/VTT subtitle codecs (50 tests)
 - ✅ Added MIDI music codec (30 tests)
 - ✅ Added ASS/SSA subtitle codec (44 tests)
+- ✅ Added CUE sheet codec (41 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
