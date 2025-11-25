@@ -6,6 +6,7 @@
 use wasm_bindgen::prelude::*;
 
 pub mod bmp;
+pub mod resize;
 pub mod utils;
 
 /// Initialize the WASM module
