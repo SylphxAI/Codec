@@ -11,11 +11,11 @@ Last Updated: 2024
 |----------|------|-------------|---------|-------|
 | Image Codecs | 29 | 0 | 6 | 35 |
 | Video Codecs | 1 | 0 | 7 | 8 |
-| Animation Codecs | 3 | 0 | 2 | 5 |
+| Animation Codecs | 4 | 0 | 1 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
 | Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 478 passing
+**Tests**: 496 passing
 
 ---
 
@@ -112,13 +112,13 @@ Last Updated: 2024
 | GIF | ✅ | ✅ | ⬜ | 256 colors, disposal |
 | APNG | ✅ | ✅ | ⬜ | Animated PNG |
 | WebP | ✅ | ✅ | ⬜ | Animated WebP |
+| FLI/FLC | ✅ | ✅ | ⬜ | Autodesk Animator, delta compression |
 
 ### 📋 Planned
 
 | Format | Decode | Encode | WASM | Notes |
 |--------|--------|--------|------|-------|
 | MNG | ⬜ | ⬜ | ⬜ | Multiple-image PNG |
-| FLIF | ⬜ | ⬜ | 🔶 | Free Lossless Image |
 
 ---
 
@@ -223,6 +223,7 @@ Last Updated: 2024
 - ✅ Added PSD Photoshop decoder (11 tests)
 - ✅ Added @mconv/metadata package (16 tests)
 - ✅ Added MJPEG video codec (18 tests)
+- ✅ Added FLI/FLC animation codec (18 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
