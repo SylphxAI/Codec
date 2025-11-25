@@ -9,6 +9,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     uses: SylphxAI/.github/.github/workflows/publish-npm.yml@main
@@ -18,5 +22,4 @@ jobs:
       version-command: 'bun run version'
       publish-command: 'bun run release'
       create-github-releases: true
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    secrets: inherit
