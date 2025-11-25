@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 30 | 0 | 5 | 35 |
-| Video Codecs | 4 | 0 | 6 | 10 |
+| Video Codecs | 5 | 0 | 6 | 11 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 679 passing
+**Tests**: 695 passing
 
 ---
 
@@ -86,6 +86,7 @@ Last Updated: 2024
 | Raw YUV | ✅ | ✅ | ⬜ | I420/YV12/NV12/YUYV/YUV444 |
 | Y4M | ✅ | ✅ | ⬜ | YUV4MPEG2 container, 4:2:0/4:2:2/4:4:4 |
 | AVI | ✅ | ✅ | ⬜ | RIFF container, MJPEG video stream |
+| FLV | ✅ | ✅ | ⬜ | Flash Video container, AMF0 metadata |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -219,6 +220,7 @@ Last Updated: 2024
 - ✅ Added ILBM/IFF image codec (16 tests)
 - ✅ Added Y4M video container (23 tests)
 - ✅ Added AVI video container (18 tests)
+- ✅ Added FLV video container (16 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -238,7 +240,7 @@ Last Updated: 2024
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add FLAC audio codec
-5. [ ] Add FLV container
+5. [ ] Add MP4 container
 6. [ ] Add SVG rasterizer
 
 ---
