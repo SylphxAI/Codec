@@ -29,12 +29,23 @@ export interface VideoData {
 }
 
 /**
+ * Raw audio data with samples per channel
+ * Samples are typically normalized Float32Array values (-1.0 to 1.0)
+ */
+export interface AudioData {
+	readonly samples: Float32Array[] // One array per channel
+	readonly sampleRate: number // Samples per second (Hz)
+	readonly channels: number // Number of audio channels
+}
+
+/**
  * Supported image formats
  */
 export type ImageFormat =
 	| 'bmp'
 	| 'png'
 	| 'jpeg'
+	| 'jxl'
 	| 'gif'
 	| 'webp'
 	| 'avif'
@@ -52,12 +63,17 @@ export type ImageFormat =
 /**
  * Supported video formats
  */
-export type VideoFormat = 'mp4' | 'webm' | 'gif' | 'avi' | 'mov'
+export type VideoFormat = 'apng' | 'mp4' | 'webm' | 'gif' | 'avi' | 'mov'
+
+/**
+ * Supported audio formats
+ */
+export type AudioFormat = 'mp3' | 'aac' | 'flac' | 'wav' | 'ogg' | 'opus'
 
 /**
  * Any supported format
  */
-export type Format = ImageFormat | VideoFormat
+export type Format = ImageFormat | VideoFormat | AudioFormat
 
 /**
  * Codec interface for encoding/decoding
@@ -77,6 +93,11 @@ export type ImageCodec = Codec<ImageData>
  * Video codec
  */
 export type VideoCodec = Codec<VideoData>
+
+/**
+ * Audio codec
+ */
+export type AudioCodec = Codec<AudioData>
 
 /**
  * Encode options
