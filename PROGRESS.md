@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 29 | 0 | 6 | 35 |
-| Video Codecs | 1 | 0 | 7 | 8 |
+| Video Codecs | 2 | 0 | 6 | 8 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 7 | 0 | 1 | 8 |
 
-**Tests**: 574 passing
+**Tests**: 600 passing
 
 ---
 
@@ -83,13 +83,7 @@ Last Updated: 2024
 | Format | Decode | Encode | WASM | Notes |
 |--------|--------|--------|------|-------|
 | MJPEG | ✅ | ✅ | ⬜ | Motion JPEG (frame sequence) |
-
-### 📋 Planned (Pure TypeScript - Simple)
-
-| Format | Decode | Encode | WASM | Notes |
-|--------|--------|--------|------|-------|
-| FLI/FLC | ⬜ | ⬜ | ⬜ | Autodesk animation |
-| Raw YUV | ⬜ | ⬜ | ⬜ | Uncompressed frames |
+| Raw YUV | ✅ | ✅ | ⬜ | I420/YV12/NV12/YUYV/YUV444 |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -223,6 +217,7 @@ Last Updated: 2024
 - ✅ Added AIFF audio codec (19 tests)
 - ✅ Added AU audio codec (21 tests)
 - ✅ Added MNG animation codec (18 tests)
+- ✅ Added Raw YUV video codec (26 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -243,7 +238,7 @@ Last Updated: 2024
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add @mconv/text package
 5. [ ] Add FLAC audio codec
-6. [ ] Add Raw YUV video codec
+6. [ ] Add ILBM/IFF image codec
 
 ---
 
