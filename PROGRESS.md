@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 30 | 0 | 5 | 35 |
-| Video Codecs | 11 | 0 | 0 | 11 |
+| Video Codecs | 12 | 0 | 0 | 12 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 6 | 0 | 0 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 937 passing
+**Tests**: 981 passing
 
 ---
 
@@ -93,6 +93,7 @@ Last Updated: 2024
 | MPEG-PS | ✅ | ✅ | ⬜ | Program Stream container (DVD/VOB), variable packs, MJPEG video |
 | M3U8/HLS | ✅ | ✅ | ⬜ | HTTP Live Streaming playlist, master/media playlists, encryption support |
 | SRT/VTT | ✅ | ✅ | ⬜ | Subtitle formats, cue settings, regions, styles |
+| ASS/SSA | ✅ | ✅ | ⬜ | Advanced subtitles, styles, override tags, positioning |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -237,6 +238,7 @@ Last Updated: 2024
 - ✅ Added M3U8/HLS playlist codec (40 tests)
 - ✅ Added SRT/VTT subtitle codecs (50 tests)
 - ✅ Added MIDI music codec (30 tests)
+- ✅ Added ASS/SSA subtitle codec (44 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking

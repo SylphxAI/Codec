@@ -2,6 +2,7 @@
 
 export * from './aiff'
 export * from './ani'
+export * from './ass'
 export * from './au'
 export * from './avi'
 export * from './bmp'
