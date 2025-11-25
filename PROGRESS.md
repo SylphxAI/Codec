@@ -166,6 +166,14 @@ Last Updated: 2024
 - Fallback to pure TS when WASM unavailable
 - Same API for both implementations
 
+### ✅ Implemented
+
+| Module | Status | Notes |
+|--------|--------|-------|
+| Loader | ✅ | Auto-detect, fallback, benchmarking |
+| Resize | ✅ | Nearest, bilinear, bicubic, Lanczos |
+| BMP | 🚧 | Decode/encode scaffolding |
+
 ### WASM Candidates
 
 | Operation | Speedup | Priority |
