@@ -1,0 +1,24 @@
+{
+	"name": "@mconv/composite",
+	"version": "0.1.0",
+	"description": "Image compositing and blend modes",
+	"type": "module",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"exports": {
+		".": {
+			"import": "./src/index.ts",
+			"types": "./src/index.ts"
+		}
+	},
+	"scripts": {
+		"test": "bun test",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@mconv/core": "workspace:*"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
