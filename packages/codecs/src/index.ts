@@ -2,6 +2,7 @@
 
 export * from './bmp'
 export * from './gif'
+export * from './hdr'
 export * from './ico'
 export * from './jpeg'
 export * from './pcx'

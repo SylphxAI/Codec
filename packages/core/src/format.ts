@@ -42,6 +42,7 @@ const IMAGE_FORMATS: Set<ImageFormat> = new Set([
 	'pgm',
 	'pbm',
 	'pcx',
+	'hdr',
 ])
 
 /**
@@ -122,6 +123,14 @@ export function detectFormat(data: Uint8Array): Format | null {
 		(data[2] === 0 || data[2] === 1)
 	) {
 		return 'pcx'
+	}
+
+	// HDR (Radiance RGBE)
+	if (data.length >= 10) {
+		const text = new TextDecoder('ascii').decode(data.slice(0, 11))
+		if (text.startsWith('#?RADIANCE') || text.startsWith('#?RGBE')) {
+			return 'hdr'
+		}
 	}
 
 	// PNM formats (PBM, PGM, PPM)

@@ -1,6 +1,7 @@
 import {
 	BmpCodec,
 	GifCodec,
+	HdrCodec,
 	IcoCodec,
 	JpegCodec,
 	PbmCodec,
@@ -23,6 +24,7 @@ import { getBackend, getWasmModule } from './backend'
 const codecs = {
 	bmp: BmpCodec,
 	gif: GifCodec,
+	hdr: HdrCodec,
 	ico: IcoCodec,
 	jpeg: JpegCodec,
 	pbm: PbmCodec,
