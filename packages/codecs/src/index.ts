@@ -1,6 +1,8 @@
 // Pure TypeScript codec implementations
 
 export * from './bmp'
+export * from './dds'
+export * from './farbfeld'
 export * from './gif'
 export * from './hdr'
 export * from './ico'
@@ -12,3 +14,4 @@ export * from './qoi'
 export * from './tga'
 export * from './tiff'
 export * from './webp'
+export * from './xpm'
