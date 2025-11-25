@@ -3,7 +3,7 @@
  * Encodes images to IFF ILBM format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	BMHD_MAGIC,
 	BODY_MAGIC,

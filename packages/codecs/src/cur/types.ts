@@ -2,7 +2,7 @@
  * CUR (Windows Cursor) format types
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /** Cursor image with hotspot */
 export interface CursorImage extends ImageData {

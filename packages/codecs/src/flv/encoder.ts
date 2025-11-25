@@ -3,7 +3,7 @@
  * Creates FLV files with video frames
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodeJpeg } from '../jpeg'
 import {
 	FLV_MAGIC,

@@ -2,7 +2,7 @@
  * KTX codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeKtx } from './decoder'
 import { encodeKtx } from './encoder'
 import type { KTXEncodeOptions } from './types'

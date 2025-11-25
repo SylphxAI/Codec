@@ -1,10 +1,10 @@
 {
-	"name": "@mconv/cli",
-	"version": "0.1.0",
+	"name": "@sylphx/codec-cli",
+	"version": "1.0.0",
 	"type": "module",
 	"description": "Universal media converter CLI - Pure TypeScript",
 	"bin": {
-		"mconv": "./dist/index.js"
+		"codec": "./dist/index.js"
 	},
 	"main": "./dist/index.js",
 	"files": ["dist"],
@@ -14,12 +14,34 @@
 		"test": "bun test"
 	},
 	"dependencies": {
-		"@mconv/core": "workspace:*",
-		"@mconv/codecs": "workspace:*"
+		"@sylphx/codec-core": "workspace:*",
+		"@sylphx/codec": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.0"
 	},
-	"keywords": ["image", "convert", "png", "jpeg", "webp", "gif", "cli"],
-	"license": "MIT"
+	"keywords": [
+		"codec",
+		"cli",
+		"convert",
+		"media",
+		"image",
+		"video",
+		"audio",
+		"png",
+		"jpeg",
+		"webp",
+		"gif",
+		"mp4",
+		"svg"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SylphxAI/codec.git",
+		"directory": "packages/cli"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }

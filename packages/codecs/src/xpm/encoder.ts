@@ -3,7 +3,7 @@
  * Encodes RGBA to text-based XPM format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { XPMEncodeOptions } from './types'
 
 // Characters used for color encoding

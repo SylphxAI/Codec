@@ -2,7 +2,7 @@
  * Histogram analysis
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { ChannelStats, Histogram, ImageStats } from './types'
 
 /**

@@ -1,5 +1,5 @@
-import type { ImageData, ImageFormat, ResizeOptions } from '@mconv/core'
-import { detectFormat, isImageFormat } from '@mconv/core'
+import type { ImageData, ImageFormat, ResizeOptions } from '@sylphx/codec-core'
+import { detectFormat, isImageFormat } from '@sylphx/codec-core'
 import { loadImage, saveImage } from './image'
 
 /**

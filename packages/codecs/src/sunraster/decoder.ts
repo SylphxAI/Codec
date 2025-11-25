@@ -3,7 +3,7 @@
  * Supports uncompressed and RLE compressed formats
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	RAS_MAGIC,
 	RMT_EQUAL_RGB,

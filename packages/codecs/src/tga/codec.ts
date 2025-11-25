@@ -1,4 +1,4 @@
-import type { Codec, EncodeOptions, ImageData } from '@mconv/core'
+import type { Codec, EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { decodeTga } from './decoder'
 import { encodeTga } from './encoder'
 

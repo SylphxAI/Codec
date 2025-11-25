@@ -1,12 +1,11 @@
 {
-	"name": "mconv",
+	"name": "codec",
 	"private": true,
 	"type": "module",
 	"workspaces": ["packages/*"],
 	"scripts": {
 		"build": "bun run --filter '*' build",
 		"test": "bun run --filter '*' test",
-		"bench": "bun run --filter '*' bench",
 		"lint": "biome check .",
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write .",

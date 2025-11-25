@@ -2,7 +2,7 @@
  * MJPEG (Motion JPEG) format types
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /** MJPEG frame */
 export interface MjpegFrame {

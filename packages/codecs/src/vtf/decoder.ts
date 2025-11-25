@@ -3,7 +3,7 @@
  * Supports common uncompressed and DXT formats
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { VTF_FORMAT, VTF_MAGIC } from './types'
 
 /**

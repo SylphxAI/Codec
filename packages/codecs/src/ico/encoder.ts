@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { encodePng } from '../png'
 import { ICO_TYPE } from './types'
 

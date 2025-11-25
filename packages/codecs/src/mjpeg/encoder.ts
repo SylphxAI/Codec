@@ -3,7 +3,7 @@
  * Encodes image sequence to raw MJPEG stream
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodeJpeg } from '../jpeg'
 import type { MjpegEncodeOptions, MjpegFrame, MjpegInfo, MjpegStream } from './types'
 

@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { inflate } from './inflate'
 import { type ColorType, type IHDRData, PNG_SIGNATURE, type PngChunk } from './types'
 

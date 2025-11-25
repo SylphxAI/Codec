@@ -2,7 +2,7 @@
  * PAM Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodePam } from './decoder'
 import { encodePam } from './encoder'
 

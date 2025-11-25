@@ -3,7 +3,7 @@
  * Autodesk Animator format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /** FLIC file magic numbers */
 export const FLIC_MAGIC_FLI = 0xaf11 // Original FLI format

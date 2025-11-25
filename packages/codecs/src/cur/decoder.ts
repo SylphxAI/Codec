@@ -2,7 +2,7 @@
  * CUR decoder - Windows Cursor format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { parseIco } from '../ico/decoder'
 import { CUR_TYPE } from '../ico/types'
 import { decodePng } from '../png'

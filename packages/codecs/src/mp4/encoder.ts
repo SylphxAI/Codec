@@ -3,7 +3,7 @@
  * Creates MP4 files with MJPEG video
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodeJpeg } from '../jpeg'
 import { Mp4BoxType, Mp4Brand, Mp4HandlerType, type Mp4EncodeOptions } from './types'
 

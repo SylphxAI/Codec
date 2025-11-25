@@ -13,9 +13,9 @@ import {
 	TgaCodec,
 	TiffCodec,
 	WebPCodec,
-} from '@mconv/codecs'
-import type { ImageData, ImageFormat } from '@mconv/core'
-import { detectFormat } from '@mconv/core'
+} from '@sylphx/codec'
+import type { ImageData, ImageFormat } from '@sylphx/codec-core'
+import { detectFormat } from '@sylphx/codec-core'
 import { getBackend, getWasmModule } from './backend'
 
 /**

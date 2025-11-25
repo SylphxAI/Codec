@@ -3,7 +3,7 @@
  * Encodes 8-bit RGBA to 16-bit RGBA
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { FARBFELD_MAGIC } from './types'
 
 /**

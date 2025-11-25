@@ -3,7 +3,7 @@
  * Supports uncompressed and RLE compressed 24-bit RGB
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	RAS_MAGIC,
 	RMT_NONE,

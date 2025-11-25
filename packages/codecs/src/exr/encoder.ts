@@ -3,7 +3,7 @@
  * Outputs: Scanline, HALF pixel type, no compression
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { ExrCompression, type ExrEncodeOptions, ExrLineOrder, ExrPixelType } from './types'
 
 /**

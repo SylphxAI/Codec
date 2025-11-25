@@ -1,4 +1,4 @@
-import type { Codec, EncodeOptions, ImageData } from '@mconv/core'
+import type { Codec, EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { decodePnm } from './decoder'
 import { encodePbm, encodePgm, encodePnm, encodePpm } from './encoder'
 

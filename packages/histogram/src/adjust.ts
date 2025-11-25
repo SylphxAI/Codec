@@ -2,7 +2,7 @@
  * Histogram-based adjustments
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { calculateCDF, calculateHistogram, findPercentile } from './analyze'
 import type { AutoContrastOptions, AutoLevelsOptions, EqualizeOptions } from './types'
 

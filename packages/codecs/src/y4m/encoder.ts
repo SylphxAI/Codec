@@ -3,7 +3,7 @@
  * Encodes video frames to Y4M format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	Y4M_FRAME_MAGIC,
 	Y4M_MAGIC,

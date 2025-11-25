@@ -3,7 +3,7 @@
  * Supports color (PF) and grayscale (Pf) variants
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /**
  * Decode PFM image to RGBA

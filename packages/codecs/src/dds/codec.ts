@@ -2,7 +2,7 @@
  * DDS Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeDds } from './decoder'
 import { encodeDds } from './encoder'
 import type { DDSEncodeOptions } from './types'

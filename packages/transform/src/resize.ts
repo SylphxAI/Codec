@@ -3,7 +3,7 @@
  * Supports nearest neighbor, bilinear, bicubic, and Lanczos interpolation
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { ResizeOptions } from './types'
 
 /**

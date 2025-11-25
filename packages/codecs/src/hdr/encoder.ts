@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { HDR_FORMAT_32BIT_RLE_RGBE, inverseToneMap, rgbToRgbe } from './types'
 
 /**

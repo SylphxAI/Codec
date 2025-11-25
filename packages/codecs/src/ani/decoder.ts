@@ -2,7 +2,7 @@
  * ANI decoder - Animated Cursor format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodeCursorFile } from '../cur/decoder'
 import type { CursorImage } from '../cur/types'
 import { ANI_FLAG_ICON, type AniHeader, type AnimatedCursor } from './types'

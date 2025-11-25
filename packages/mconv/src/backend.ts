@@ -1,4 +1,4 @@
-import type { Backend } from '@mconv/core'
+import type { Backend } from '@sylphx/codec-core'
 
 /**
  * Current backend preference

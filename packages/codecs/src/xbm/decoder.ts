@@ -3,7 +3,7 @@
  * Parses C-style XBM format to RGBA (black/white)
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /**
  * Decode XBM image to RGBA

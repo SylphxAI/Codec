@@ -3,7 +3,7 @@
  * Extension of PNM supporting arbitrary depth and alpha
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { PAMTupleType } from './types'
 
 /**

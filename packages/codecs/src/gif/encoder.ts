@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { lzwCompress } from './lzw'
 import { GIF89A, GRAPHIC_CONTROL_EXTENSION, IMAGE_SEPARATOR, TRAILER } from './types'
 

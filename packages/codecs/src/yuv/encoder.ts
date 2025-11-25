@@ -3,7 +3,7 @@
  * Encodes images to uncompressed YUV video frames
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { YuvFormat, type YuvEncodeOptions, type YuvFormatType, type YuvInfo, type YuvStream } from './types'
 import { getYuvFrameSize } from './decoder'
 

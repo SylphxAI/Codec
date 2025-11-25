@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { lzwDecompress } from './lzw'
 import {
 	APPLICATION_EXTENSION,

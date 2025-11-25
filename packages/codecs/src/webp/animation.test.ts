@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import type { VideoData, VideoFrame } from '@mconv/core'
+import type { VideoData, VideoFrame } from '@sylphx/codec-core'
 import { decodeWebPAnimation, encodeWebPAnimation } from './animation'
 import { encodeWebP } from './encoder'
 

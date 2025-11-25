@@ -3,7 +3,7 @@
  * EBML-based container format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /**
  * EBML Element IDs (subset for Matroska)

@@ -3,7 +3,7 @@
  * Animation format related to PNG
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /** MNG file header (MHDR chunk) */
 export interface MngHeader {

@@ -4,7 +4,7 @@
  * Supports: PSD v1, 8/16-bit, RGB/Grayscale/CMYK
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { PsdColorMode, PsdCompression, type PsdHeader, type PsdInfo, type PsdLayer } from './types'
 
 const PSD_SIGNATURE = '8BPS'

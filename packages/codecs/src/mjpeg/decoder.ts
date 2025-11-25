@@ -3,7 +3,7 @@
  * Decodes raw MJPEG streams (concatenated JPEGs)
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodeJpeg } from '../jpeg'
 import type { MjpegDecodeOptions, MjpegFrame, MjpegInfo, MjpegStream } from './types'
 

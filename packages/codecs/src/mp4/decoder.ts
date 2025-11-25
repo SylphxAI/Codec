@@ -3,7 +3,7 @@
  * Parses MP4 container structure and extracts track info
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodeJpeg } from '../jpeg'
 import {
 	Mp4BoxType,

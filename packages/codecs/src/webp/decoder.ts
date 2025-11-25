@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { VP8LBitReader, buildHuffmanTable, decodeHuffman, readHuffmanCodeLength } from './bitstream'
 import {
 	CHUNK_VP8,

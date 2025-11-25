@@ -3,7 +3,7 @@
  * Encodes to uncompressed RGBA8888 format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { PVREncodeOptions } from './types'
 import { PVR3_MAGIC } from './types'
 

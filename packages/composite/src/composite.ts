@@ -2,7 +2,7 @@
  * Image compositing operations
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { blendComponent, getBlendFunction, isComponentBlendMode } from './blend'
 import type { BlendMode, CompositeOptions, Layer } from './types'
 

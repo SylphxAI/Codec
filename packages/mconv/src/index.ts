@@ -5,10 +5,10 @@
  */
 
 // Re-export core types and utilities
-export * from '@mconv/core'
+export * from '@sylphx/codec-core'
 
 // Re-export codecs
-export * from '@mconv/codecs'
+export * from '@sylphx/codec'
 
 // Main API
 export { convert } from './convert'

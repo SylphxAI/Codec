@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { PnmFormat, type PnmHeader, getChannels, isAsciiFormat } from './types'
 
 /**

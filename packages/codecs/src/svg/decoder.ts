@@ -3,7 +3,7 @@
  * Rasterizes SVG to bitmap ImageData
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { parseSvg } from './parser'
 import { renderSvg } from './renderer'
 import type { SvgDecodeOptions, SvgInfo } from './types'

@@ -2,7 +2,7 @@
  * PIX codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodePix } from './decoder'
 import { encodePix } from './encoder'
 import type { PIXEncodeOptions } from './types'

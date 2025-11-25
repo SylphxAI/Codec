@@ -1,4 +1,4 @@
-import type { ImageData, VideoData, VideoFrame } from '@mconv/core'
+import type { ImageData, VideoData, VideoFrame } from '@sylphx/codec-core'
 import { deflate } from './deflate'
 import { inflate } from './inflate'
 import { ColorType, PNG_SIGNATURE } from './types'

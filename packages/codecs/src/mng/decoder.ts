@@ -3,7 +3,7 @@
  * Decodes MNG animations to frame sequences
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodePng } from '../png'
 import {
 	MNG_SIGNATURE,

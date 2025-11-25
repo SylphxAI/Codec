@@ -3,7 +3,7 @@
  * Decodes IFF ILBM and PBM images
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	BMHD_MAGIC,
 	BODY_MAGIC,

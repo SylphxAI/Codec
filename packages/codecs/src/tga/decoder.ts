@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	ORIGIN_BOTTOM_RIGHT,
 	ORIGIN_MASK,

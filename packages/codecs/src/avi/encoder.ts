@@ -3,7 +3,7 @@
  * Creates AVI files with MJPEG or raw video
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodeJpeg } from '../jpeg'
 import {
 	AVIH_MAGIC,

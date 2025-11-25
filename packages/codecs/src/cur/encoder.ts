@@ -2,7 +2,7 @@
  * CUR encoder - Windows Cursor format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodePng } from '../png'
 import type { CurEncodeOptions, CursorImage } from './types'
 

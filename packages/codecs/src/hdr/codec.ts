@@ -1,4 +1,4 @@
-import type { Codec, EncodeOptions, ImageData } from '@mconv/core'
+import type { Codec, EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { decodeHdr } from './decoder'
 import { encodeHdr } from './encoder'
 

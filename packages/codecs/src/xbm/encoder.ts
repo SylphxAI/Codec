@@ -3,7 +3,7 @@
  * Encodes RGBA to C-style XBM format (monochrome)
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { XBMEncodeOptions } from './types'
 
 /**

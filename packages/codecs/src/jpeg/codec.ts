@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageCodec, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeJpeg } from './decoder'
 import { encodeJpeg } from './encoder'
 

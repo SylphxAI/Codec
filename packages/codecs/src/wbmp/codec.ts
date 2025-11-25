@@ -2,7 +2,7 @@
  * WBMP Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeWbmp } from './decoder'
 import { encodeWbmp } from './encoder'
 import type { WBMPEncodeOptions } from './types'

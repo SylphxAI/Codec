@@ -2,7 +2,7 @@
  * Farbfeld Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeFarbfeld } from './decoder'
 import { encodeFarbfeld } from './encoder'
 import { FARBFELD_MAGIC } from './types'

@@ -3,7 +3,7 @@
  * Parses RIFF AVI container and extracts streams
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodeJpeg } from '../jpeg'
 import {
 	AVIH_MAGIC,

@@ -3,7 +3,7 @@
  * Supports PVR v3 format with common uncompressed formats
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { PVR3_MAGIC, PVR_PIXEL_FORMAT } from './types'
 
 /**

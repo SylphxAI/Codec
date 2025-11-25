@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test'
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { decodeTs, encodeTs, isTs, parseTsInfo, TS_PACKET_SIZE, TS_SYNC_BYTE } from './index'
 
 describe('MPEG-TS Codec', () => {

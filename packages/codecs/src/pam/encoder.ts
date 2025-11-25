@@ -3,7 +3,7 @@
  * Always outputs RGB_ALPHA format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /**
  * Encode image to PAM format

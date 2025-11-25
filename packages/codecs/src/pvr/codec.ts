@@ -2,7 +2,7 @@
  * PVR codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodePvr } from './decoder'
 import { encodePvr } from './encoder'
 import type { PVREncodeOptions } from './types'

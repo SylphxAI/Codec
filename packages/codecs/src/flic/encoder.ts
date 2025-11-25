@@ -3,7 +3,7 @@
  * Encodes animations to FLC format
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	FLIC_MAGIC_FLC,
 	type FlicAnimation,

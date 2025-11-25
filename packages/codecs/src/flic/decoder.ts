@@ -3,7 +3,7 @@
  * Decodes Autodesk Animator animations
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	FLIC_MAGIC_FLC,
 	FLIC_MAGIC_FLI,

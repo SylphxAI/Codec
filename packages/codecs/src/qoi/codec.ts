@@ -1,4 +1,4 @@
-import type { Codec, ImageData } from '@mconv/core'
+import type { Codec, ImageData } from '@sylphx/codec-core'
 import { decodeQoi } from './decoder'
 import { encodeQoi } from './encoder'
 

@@ -3,7 +3,7 @@
  * Renders SVG elements to a bitmap
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type {
 	LinearGradient,
 	PathCommand,

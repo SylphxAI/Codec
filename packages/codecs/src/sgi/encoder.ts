@@ -3,7 +3,7 @@
  * Supports uncompressed and RLE compressed formats
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { type SGIEncodeOptions, SGI_MAGIC, SGI_NORMAL, SGI_RLE, SGI_VERBATIM } from './types'
 
 /**

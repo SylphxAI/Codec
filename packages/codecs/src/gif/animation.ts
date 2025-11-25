@@ -1,4 +1,4 @@
-import type { ImageData, VideoData, VideoFrame } from '@mconv/core'
+import type { ImageData, VideoData, VideoFrame } from '@sylphx/codec-core'
 import { parseGif } from './decoder'
 import { lzwCompress } from './lzw'
 import {

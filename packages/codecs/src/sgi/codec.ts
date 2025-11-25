@@ -2,7 +2,7 @@
  * SGI Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeSgi } from './decoder'
 import { encodeSgi } from './encoder'
 import type { SGIEncodeOptions } from './types'

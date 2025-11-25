@@ -1,4 +1,4 @@
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { idct8x8 } from './dct'
 import { JpegBitReader, buildHuffmanTable } from './huffman'
 import type { Component, FrameInfo, HuffmanTable, QuantTable } from './types'

@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { fdct8x8 } from './dct'
 import { Marker, STD_CHROMA_QUANT, STD_LUMA_QUANT, ZIGZAG } from './types'
 

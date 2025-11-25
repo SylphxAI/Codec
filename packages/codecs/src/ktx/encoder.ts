@@ -3,7 +3,7 @@
  * Encodes to KTX1 format with uncompressed RGBA
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { KTXEncodeOptions } from './types'
 import { GL_RGBA, GL_RGBA8, GL_UNSIGNED_BYTE, KTX1_MAGIC } from './types'
 

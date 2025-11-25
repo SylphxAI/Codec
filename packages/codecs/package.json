@@ -1,7 +1,8 @@
 {
-	"name": "@mconv/codecs",
-	"version": "0.0.1",
+	"name": "@sylphx/codec",
+	"version": "1.0.0",
 	"type": "module",
+	"description": "Pure TypeScript media codecs - image, video, audio, subtitle",
 	"main": "./src/index.ts",
 	"types": "./src/index.ts",
 	"exports": {
@@ -9,24 +10,46 @@
 			"bun": "./src/index.ts",
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js"
-		},
-		"./bmp": {
-			"bun": "./src/bmp/index.ts",
-			"types": "./dist/bmp/index.d.ts",
-			"import": "./dist/bmp/index.js"
 		}
 	},
 	"files": ["dist"],
 	"scripts": {
 		"build": "bun build ./src/index.ts --outdir ./dist --target browser && bun run build:types",
 		"build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
-		"test": "bun test",
-		"bench": "bun run ./bench/index.ts"
+		"test": "bun test"
 	},
 	"dependencies": {
-		"@mconv/core": "workspace:*"
+		"@sylphx/codec-core": "workspace:*"
 	},
 	"devDependencies": {
 		"typescript": "^5.7.2"
+	},
+	"keywords": [
+		"codec",
+		"media",
+		"image",
+		"video",
+		"audio",
+		"subtitle",
+		"png",
+		"jpeg",
+		"gif",
+		"webp",
+		"mp4",
+		"mkv",
+		"wav",
+		"flac",
+		"svg",
+		"typescript",
+		"pure"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SylphxAI/codec.git",
+		"directory": "packages/codecs"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

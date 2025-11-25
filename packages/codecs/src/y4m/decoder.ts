@@ -3,7 +3,7 @@
  * Decodes Y4M video streams
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	Y4M_FRAME_MAGIC,
 	Y4M_MAGIC,

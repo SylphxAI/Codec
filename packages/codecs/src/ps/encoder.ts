@@ -3,7 +3,7 @@
  * Creates PS files with MJPEG video
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { encodeJpeg } from '../jpeg'
 import { type PsEncodeOptions } from './types'
 

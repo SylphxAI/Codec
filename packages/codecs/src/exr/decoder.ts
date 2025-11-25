@@ -3,7 +3,7 @@
  * Supports: Scanline images, NONE/RLE compression, HALF/FLOAT pixel types
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	type ExrBox2i,
 	type ExrChannel,

@@ -3,7 +3,7 @@
  * Supports KTX1 format with uncompressed textures
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	GL_ALPHA,
 	GL_LUMINANCE,

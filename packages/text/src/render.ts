@@ -2,7 +2,7 @@
  * Text rendering functions
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { getDefaultFont } from './font'
 import type { BitmapFont, DrawTextOptions, TextMetrics, TextRenderOptions } from './types'
 

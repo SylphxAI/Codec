@@ -2,7 +2,7 @@
  * XPM Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeXpm } from './decoder'
 import { encodeXpm } from './encoder'
 import type { XPMEncodeOptions } from './types'

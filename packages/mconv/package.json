@@ -18,8 +18,8 @@
 		"bench": "bun run ./bench/index.ts"
 	},
 	"dependencies": {
-		"@mconv/core": "workspace:*",
-		"@mconv/codecs": "workspace:*"
+		"@sylphx/codec-core": "workspace:*",
+		"@sylphx/codec": "workspace:*"
 	},
 	"devDependencies": {
 		"typescript": "^5.7.2"

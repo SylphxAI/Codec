@@ -2,7 +2,7 @@
  * Color adjustment operations
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { hslToRgb, rgbToHsl } from './convert'
 import type { AdjustmentOptions, LevelsOptions } from './types'
 

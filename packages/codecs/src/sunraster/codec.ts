@@ -2,7 +2,7 @@
  * Sun Raster Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeSunRaster } from './decoder'
 import { encodeSunRaster } from './encoder'
 import type { SunRasterEncodeOptions } from './types'

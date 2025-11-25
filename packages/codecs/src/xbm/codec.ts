@@ -2,7 +2,7 @@
  * XBM Codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodeXbm } from './decoder'
 import { encodeXbm } from './encoder'
 import type { XBMEncodeOptions } from './types'

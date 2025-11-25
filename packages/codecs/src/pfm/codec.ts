@@ -2,7 +2,7 @@
  * PFM codec implementation
  */
 
-import type { ImageCodec, ImageData } from '@mconv/core'
+import type { ImageCodec, ImageData } from '@sylphx/codec-core'
 import { decodePfm } from './decoder'
 import { encodePfm } from './encoder'
 import type { PFMEncodeOptions } from './types'

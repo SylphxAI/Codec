@@ -2,7 +2,7 @@
  * Image crop operations
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import type { CropOptions } from './types'
 
 /**

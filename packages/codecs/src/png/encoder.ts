@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { deflate } from './deflate'
 import { ColorType, FilterType, PNG_SIGNATURE } from './types'
 

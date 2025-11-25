@@ -1,0 +1,22 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    uses: SylphxAI/.github/.github/workflows/publish-npm.yml@main
+    with:
+      build-command: 'bun run build'
+      test-command: 'bun test'
+      version-command: 'bun run version'
+      publish-command: 'bun run release'
+      create-github-releases: true
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

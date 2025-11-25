@@ -3,7 +3,7 @@
  * Supports uncompressed RGBA and DXT1/DXT5 compressed formats
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import {
 	DDPF_ALPHAPIXELS,
 	DDPF_FOURCC,

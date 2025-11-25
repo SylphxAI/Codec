@@ -3,7 +3,7 @@
  * Simple monochrome format used for mobile devices
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 
 /**
  * Decode WBMP image to RGBA

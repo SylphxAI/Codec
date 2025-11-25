@@ -1,4 +1,4 @@
-import type { ImageData, VideoData, VideoFrame } from '@mconv/core'
+import type { ImageData, VideoData, VideoFrame } from '@sylphx/codec-core'
 import {
 	VP8LBitReader,
 	VP8LBitWriter,

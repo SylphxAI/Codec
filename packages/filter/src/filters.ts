@@ -2,7 +2,7 @@
  * Image filters
  */
 
-import type { ImageData } from '@mconv/core'
+import type { ImageData } from '@sylphx/codec-core'
 import { convolve, convolveSeparable, createBoxKernel, createGaussianKernel } from './convolve'
 import type {
 	BlurOptions,

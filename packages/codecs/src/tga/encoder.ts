@@ -1,4 +1,4 @@
-import type { EncodeOptions, ImageData } from '@mconv/core'
+import type { EncodeOptions, ImageData } from '@sylphx/codec-core'
 import { ORIGIN_TOP_LEFT, TgaImageType } from './types'
 
 /**
