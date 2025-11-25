@@ -9,7 +9,7 @@ Last Updated: 2024
 
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
-| Image Codecs | 25 | 0 | 10 | 35 |
+| Image Codecs | 27 | 0 | 8 | 35 |
 | Video Codecs | 0 | 0 | 8 | 8 |
 | Animation Codecs | 3 | 0 | 2 | 5 |
 | Audio Codecs | 0 | 0 | 6 | 6 |
@@ -25,7 +25,9 @@ Last Updated: 2024
 
 | Format | Decode | Encode | WASM | Notes |
 |--------|--------|--------|------|-------|
+| ANI | ✅ | ✅ | ⬜ | Animated cursor, RIFF |
 | BMP | ✅ | ✅ | ⬜ | 1/4/8/16/24/32-bit, RLE |
+| CUR | ✅ | ✅ | ⬜ | Cursor with hotspot |
 | DDS | ✅ | ⬜ | ⬜ | DXT1/DXT3/DXT5, BC1-BC5 |
 | Farbfeld | ✅ | ✅ | ⬜ | 16-bit RGBA |
 | GIF | ✅ | ✅ | ⬜ | Animation, LZW |
@@ -55,8 +57,6 @@ Last Updated: 2024
 
 | Format | Decode | Encode | WASM | Priority | Notes |
 |--------|--------|--------|------|----------|-------|
-| CUR | ⬜ | ⬜ | ⬜ | High | Windows cursor |
-| ANI | ⬜ | ⬜ | ⬜ | Medium | Animated cursor |
 | EXR | ⬜ | ⬜ | ⬜ | High | OpenEXR HDR (simplified) |
 | ILBM/IFF | ⬜ | ⬜ | ⬜ | Low | Amiga format |
 | PSD | ⬜ | ⬜ | ⬜ | Medium | Photoshop (flattened) |
@@ -211,6 +211,10 @@ Last Updated: 2024
 - ✅ Added @mconv/filter package (20 tests)
 - ✅ Added @mconv/composite package (22 tests)
 - ✅ Added @mconv/draw package (20 tests)
+- ✅ Added CUR cursor codec (8 tests)
+- ✅ Added ANI animated cursor codec (9 tests)
+- ✅ Added WASM resize module (Rust)
+- ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
 
 ### Previous Sessions
