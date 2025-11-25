@@ -10,12 +10,12 @@ Last Updated: 2024
 | Category | Done | In Progress | Planned | Total |
 |----------|------|-------------|---------|-------|
 | Image Codecs | 30 | 0 | 5 | 35 |
-| Video Codecs | 6 | 0 | 5 | 11 |
+| Video Codecs | 7 | 0 | 4 | 11 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
 | Audio Codecs | 3 | 0 | 3 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 713 passing
+**Tests**: 735 passing
 
 ---
 
@@ -88,6 +88,7 @@ Last Updated: 2024
 | AVI | ✅ | ✅ | ⬜ | RIFF container, MJPEG video stream |
 | FLV | ✅ | ✅ | ⬜ | Flash Video container, AMF0 metadata |
 | MP4 | ✅ | ✅ | ⬜ | ISO Base Media File Format, MJPEG video |
+| MKV | ✅ | ✅ | ⬜ | Matroska/WebM container, EBML format, MJPEG video |
 
 ### 🔶 WASM-Only (Inter-frame Compression)
 
@@ -223,6 +224,7 @@ Last Updated: 2024
 - ✅ Added AVI video container (18 tests)
 - ✅ Added FLV video container (16 tests)
 - ✅ Added MP4 video container (18 tests)
+- ✅ Added MKV/WebM video container (22 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
@@ -242,7 +244,7 @@ Last Updated: 2024
 2. [ ] Add WASM backend for JPEG
 3. [ ] Add H.264 WASM decoder
 4. [ ] Add FLAC audio codec
-5. [ ] Add MKV container
+5. [ ] Add WebM video container (VP8/VP9 WASM)
 6. [ ] Add SVG rasterizer
 
 ---
