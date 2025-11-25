@@ -1,5 +1,6 @@
 {
 	"name": "@mconv/filter",
+	"private": true,
 	"version": "0.1.0",
 	"description": "Image filters and convolution operations",
 	"type": "module",

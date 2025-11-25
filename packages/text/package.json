@@ -1,5 +1,6 @@
 {
 	"name": "@mconv/text",
+	"private": true,
 	"version": "0.1.0",
 	"description": "Text rendering with bitmap fonts",
 	"type": "module",

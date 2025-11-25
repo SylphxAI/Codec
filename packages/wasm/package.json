@@ -1,5 +1,6 @@
 {
 	"name": "@mconv/wasm",
+	"private": true,
 	"version": "0.0.1",
 	"type": "module",
 	"main": "./pkg/mconv_wasm.js",

@@ -1,5 +1,6 @@
 {
 	"name": "@mconv/composite",
+	"private": true,
 	"version": "0.1.0",
 	"description": "Image compositing and blend modes",
 	"type": "module",

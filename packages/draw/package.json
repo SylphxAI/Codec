@@ -1,5 +1,6 @@
 {
 	"name": "@mconv/draw",
+	"private": true,
 	"version": "0.1.0",
 	"description": "Drawing primitives and shapes",
 	"type": "module",
