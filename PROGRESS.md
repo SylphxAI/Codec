@@ -12,10 +12,10 @@ Last Updated: 2024
 | Image Codecs | 30 | 0 | 5 | 35 |
 | Video Codecs | 11 | 0 | 0 | 11 |
 | Animation Codecs | 5 | 0 | 0 | 5 |
-| Audio Codecs | 5 | 0 | 1 | 6 |
+| Audio Codecs | 6 | 0 | 0 | 6 |
 | Processing Packages | 8 | 0 | 0 | 8 |
 
-**Tests**: 907 passing
+**Tests**: 937 passing
 
 ---
 
@@ -131,12 +131,13 @@ Last Updated: 2024
 | AU | ✅ | ✅ | ⬜ | Sun/NeXT audio, μ-law/A-law decode |
 | FLAC | ✅ | ✅ | ⬜ | Lossless compression, Rice coding, fixed prediction |
 | OGG | ✅ | ✅ | ⬜ | Container format, OGG FLAC support |
+| MIDI | ✅ | ✅ | ⬜ | Standard MIDI File, multi-track, all events |
 
 ### 🔶 WASM-Only
 
 | Format | Decode | Encode | Notes |
 |--------|--------|--------|-------|
-| MP3 | ⬜ | ⬜ | MPEG Layer 3 |
+| MP3 | ⬜ | ⬜ | MPEG Layer 3 (requires complex decoding) |
 
 ---
 
@@ -235,6 +236,7 @@ Last Updated: 2024
 - ✅ Added MPEG-PS video container (20 tests)
 - ✅ Added M3U8/HLS playlist codec (40 tests)
 - ✅ Added SRT/VTT subtitle codecs (50 tests)
+- ✅ Added MIDI music codec (30 tests)
 - ✅ Added WASM resize module (Rust)
 - ✅ Added WASM TypeScript loader
 - 📝 Created PROGRESS.md for tracking
