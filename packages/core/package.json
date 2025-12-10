@@ -1,6 +1,6 @@
 {
 	"name": "@sylphx/codec-core",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"description": "Core types and utilities for @sylphx/codec",
 	"main": "./src/index.ts",
@@ -11,7 +11,9 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "bun build ./src/index.ts --outdir ./dist --target browser",
 		"test": "bun test"
@@ -19,7 +21,12 @@
 	"devDependencies": {
 		"typescript": "^5.7.2"
 	},
-	"keywords": ["codec", "media", "types", "typescript"],
+	"keywords": [
+		"codec",
+		"media",
+		"types",
+		"typescript"
+	],
 	"license": "MIT",
 	"repository": {
 		"type": "git",
