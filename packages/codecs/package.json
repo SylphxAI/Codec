@@ -1,6 +1,6 @@
 {
 	"name": "@sylphx/codec",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"description": "Pure TypeScript media codecs - image, video, audio, subtitle",
 	"main": "./src/index.ts",
@@ -11,7 +11,9 @@
 			"import": "./dist/index.js"
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "bun build ./src/index.ts --outdir ./dist --target browser",
 		"test": "bun test"
